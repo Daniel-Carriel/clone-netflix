@@ -1,0 +1,150 @@
+
+:root {
+	--vermelho: #D80505;
+	--preto: #0F0F0F;
+}
+/*:root serve para podermos usar variáveis no CSS*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--preto);
+	font-family: 'Times new Roman', Times, serif;
+	color: #FFFFFF;
+}
+
+/*menu da esquerda*/
+
+header .container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 60px;
+}
+
+header .logo {
+	color: var(--vermelho) ;
+	margin-right: 30px;
+	font-size: 30px;
+}
+
+header nav a {
+	text-decoration: none;
+	color: #FFFFFF;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+header nav a:hover {    
+	color: #AFACAC;
+	transition: .3s ease all;
+}
+ /* hover faz com que haja uma ação quando o mouse
+  passe por cima do elemento esolhido. No exemplo a cima 
+  o elemento escolhido muda de cor */ 
+
+
+
+/*filme-principal*/
+
+.filme-principal {
+	font-size: 16px;
+	background-image: linear-gradient(to right, #0F0F0F 25%, transparent), url('../img/capa-ultimato.jpg');
+
+	/* O linear-gradient(to right,  #0F0F0F 25%, transparent), 
+	faz um degradê na propriedade escolhida.*/
+	height: 580px;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.relevancia {
+	display: flex;
+	align-items: center; 
+}
+
+.relevancia p {
+	font-size: 18px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.verde {
+	color: #06F52D;
+}
+
+.idade {
+	margin-top: 10px;
+	width: 30px;
+	height: 30px;
+}
+
+.filme-principal .descricao {
+	font-size: 18px;
+	margin-bottom: 50px;
+	margin-top: 10px;
+	margin-right: 300px;
+}
+
+.titulo {
+	width: 420px;
+	height: 175px;
+}
+
+.botao {
+	background-color: #444343;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	padding: 15px  30px;
+	cursor: pointer;
+	/* cursor: pointer; faz com que o cursor mude
+	de orma quando o mouse passa pelo
+	 elemento escolhido */
+	transition: .3s ease all;
+	/*transition: .3s ease all, ele define o tempo em que 
+	acontece a mudança quando passa o mouse por cima.*/
+}
+
+.botao:hover {
+	background-color: white;
+	color: black;
+}
+
+.botao i {
+	margin-right: 8px;
+}
+
+.filme-principal .container {
+	width: 70%;
+	margin-left: 30px;
+}
+
+/* carrossel de filmes*/
+
+.box-filmes{
+	height: 350px;
+	width: 100%;
+	display: block;
+}
+.carrossel-filmes{
+	margin-top: 10px;
+}
+
+.sequencia{
+	font-size: 30px;
+	margin: 10px;
+}
+
+.item .box-filmes:hover {
+	cursor: pointer;
+	border: solid  #FFFFFF ;
+	transition: .3s ease all;
+}
